@@ -3,16 +3,15 @@ services:
     name: score-sync-backend
     env: python
     buildCommand: |
+      cd backend
       pip install -r requirements.txt
       python manage.py collectstatic --noinput
-    startCommand: gunicorn backend.wsgi:application
+    startCommand: cd backend && gunicorn backend.wsgi:application
     envVars:
       - key: DJANGO_SECRET_KEY
         generateValue: true
       - key: DATABASE_URL
-        fromDatabase:
-          name: score-sync-db
-          property: connectionString
+        value: postgresql://scoresync_cf1c_user:V4yTJhpzCd7X6A2JxEwD2sUH1alvYJtw@dpg-d0lm403e5dus73cncus0-a.oregon-postgres.render.com/scoresync_cf1c
       - key: FIREBASE_STORAGE_BUCKET
         value: scoresync-3ce4c.appspot.com
       - key: FIREBASE_WEB_API_KEY
@@ -30,6 +29,6 @@ services:
 
 databases:
   - name: score-sync-db
-    databaseName: score_sync
-    user: score_sync_user
-    plan: free 
+    databaseName: scoresync_cf1c
+    user: scoresync_cf1c_user
+    plan: free
