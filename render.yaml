@@ -26,9 +26,3 @@ services:
         value: false
     healthCheckPath: /api/health/
     autoDeploy: true
-
-databases:
-  - name: score-sync-db
-    databaseName: scoresync_cf1c
-    user: scoresync_cf1c_user
-    plan: free
