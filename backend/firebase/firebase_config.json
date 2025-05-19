@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "644724320982",
+    "project_id": "scoresync-3ce4c",
+    "storage_bucket": "scoresync-3ce4c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644724320982:android:53ab5afb21f54ba1f83777",
+        "android_client_info": {
+          "package_name": "com.example.scoresync"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644724320982-ds3aqb0q9qg4s4ff23snohvpslkl5o6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM4P96ZUTRn-unirz1fZVRPJNByMAWdAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644724320982-ds3aqb0q9qg4s4ff23snohvpslkl5o6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
