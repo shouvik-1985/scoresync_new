@@ -3,7 +3,9 @@ import axios from 'axios';
 import { publicAxios } from './axiosInstance'; 
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api', // or your backend base URL
+  baseURL: import.meta.env.PROD 
+    ? 'https://score-sync-backend.onrender.com/api'
+    : 'http://localhost:8000/api',
   withCredentials: true, // if using authentication
 });
 

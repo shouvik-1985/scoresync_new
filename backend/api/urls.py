@@ -3,6 +3,7 @@ from . import views
 from .views import get_current_user, health_check
 
 urlpatterns = [
+    path('', health_check, name='health_check'),
     path('register/', views.register_user, name='register'),
     path('login/', views.login_user, name='login'),
     path('google-signin/', views.google_signin, name='google_signin'),

@@ -18,6 +18,14 @@ from friends.models import FriendRequest
 class GameListAPIView(generics.ListAPIView):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
+    permission_classes = [permissions.AllowAny]  # Allow unauthenticated access
+
+    def get_queryset(self):
+        try:
+            return Game.objects.all()
+        except Exception as e:
+            print(f"Error fetching games: {e}")
+            return Game.objects.none()
 
 class MatchListCreateAPIView(generics.ListCreateAPIView):
     serializer_class = MatchSerializer
